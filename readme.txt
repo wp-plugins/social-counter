@@ -12,15 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * First Release
 
 == Description ==
-Simple tool to show social networks statistic by url. Support this site:
-- Tweeter
-- Linkedin
-- Facebook
-- Reddit
-- Stumbleupon
-- Delicious
-- Pinterest
-- Google Plus
+Simple tool to show social networks statistic by url. Support this site: Tweeter, Linkedin, Facebook, Reddit, Stumbleupon, Delicious, Pinterest, Google Plus. 
 - 
 
 == Installation ==
