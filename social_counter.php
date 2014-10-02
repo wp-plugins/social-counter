@@ -1,11 +1,11 @@
 ﻿<?php
 /*
 Plugin Name: Social Counter
-Plugin URI: https://github.com/jzvikas/Social-Counter 
+Plugin URI: https://wordpress.org/plugins/social-counter/ 
 Description: Show page/post social network statistic.
-Author: Justinas Žvikas
+Author: Justinas Zvikas
 Version: 1.0
-Author URI: https://github.com/jzvikas/Social-Counter
+Author URI: https://github.com/jzvikas/
 */
 require_once('social.php');
 require_once('widget.php');
