@@ -2,7 +2,7 @@
 /*
 Plugin Name: Social Counter
 Plugin URI: https://github.com/jzvikas/Social-Counter 
-Description: Parodo pranešimo/puslapio socialinių tinklų statistiką.
+Description: Show social networks statistics
 Author: Justinas Žvikas
 Version: 1.0
 Author URI: https://github.com/jzvikas/Social-Counter
