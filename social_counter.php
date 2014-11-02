@@ -1,11 +1,11 @@
-﻿<?php
+<?php
 /*
 Plugin Name: Social Counter
-Plugin URI: https://wordpress.org/plugins/social-counter/ 
-Description: Show page/post social network statistic.
-Author: Justinas Zvikas
+Plugin URI: https://github.com/jzvikas/Social-Counter 
+Description: Parodo pranešimo/puslapio socialinių tinklų statistiką.
+Author: Justinas Žvikas
 Version: 1.0
-Author URI: https://github.com/jzvikas/
+Author URI: https://github.com/jzvikas/Social-Counter
 */
 require_once('social.php');
 require_once('widget.php');
@@ -29,12 +29,6 @@ function social_counter_load_widget() {
 register_widget( 'Social_Counter' );
 }
 add_action( 'widgets_init', 'social_counter_load_widget' );
-//===============================================
-function social_counter_languages()
-{
-load_plugin_textdomain('sc_lang', false, basename( dirname( __FILE__ ) ) . '/lang' );
-}
-add_action('init', 'social_counter_languages');
 //===============================================
 function sc_styles()
 {

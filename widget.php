@@ -27,10 +27,10 @@ if ( isset( $instance[ 'title' ] ) ) {
 $title = $instance[ 'title' ];
 }
 else {
-$title = __('Pavadinimas','sc_lang');
+$title = 'Title';
 }
 echo '<p>
-<label for="'.$this->get_field_id( 'title' ).'">'.__('Pavadinimas','sc_lang').':</label>
+<label for="'.$this->get_field_id( 'title' ).'">Title:</label>
 <input class="widefat" id="'.$this->get_field_id( 'title' ).'" name="'.$this->get_field_name( 'title' ).'" type="text" value="'.esc_attr( $title ).'" />
 </p>';
 }
