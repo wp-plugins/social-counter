@@ -1,5 +1,5 @@
 === Social Counter===
-Contributors: Justinas Zvikas
+Contributors: djjmz
 Requires at least: 3.6
 Tested up to: 4.0
 Stable tag: 1.0.10
