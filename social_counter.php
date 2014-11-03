@@ -3,7 +3,7 @@
 Plugin Name: Social Counter
 Plugin URI: https://github.com/jzvikas/Social-Counter 
 Description: Show social networks statistics
-Author: Justinas Žvikas
+Author: djjmz
 Version: 1.0
 Author URI: https://github.com/jzvikas/Social-Counter
 */
