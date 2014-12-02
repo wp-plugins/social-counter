@@ -2,17 +2,18 @@
 Contributors: djjmz
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.0.10
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
-
+= 1.0.1 =
+* Add caching
 = 1.0.0 =
 * First Release
 
 == Description ==
-Simple tool to show social networks statistic by url. Support this site: Tweeter, Linkedin, Facebook, Reddit, Stumbleupon, Delicious, Pinterest, Google Plus. 
+Simple tool to show social networks statistic by url. Support this site: Tweeter, Linkedin, Facebook, Reddit, Stumbleupon, Delicious, Pinterest, Google Plus. Now all data is caching for one hour.
 - 
 
 == Installation ==
