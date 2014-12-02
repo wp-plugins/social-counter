@@ -10,12 +10,15 @@ class Social_Counter extends WP_Widget {
         global $post;
         extract($args);
         $title = apply_filters('widget_title', $instance['title']);
-        $cache = $instance['cache'] ? 'on' : 'off';
+        $cache = ($instance['cache'] == 'on') ? 'on' : 'off';
         echo $args['before_widget'];
         if (!empty($title))
             echo $args['before_title'] . $title . $args['after_title'];
         $current_url = home_url(add_query_arg(array()));
         $social = new Social;
+        if (!is_dir(WP_CONTENT_DIR . '/cache/')) {
+            mkdir(WP_CONTENT_DIR . '/cache/', 0777);
+        }
         $cache_file = WP_CONTENT_DIR . '/cache/' . md5($_SERVER['REQUEST_URI']) . '.html';
         if ($cache == 'on') {
             if (!file_exists($cache_file) or ( time() - filemtime($cache_file)) > 3600) {
@@ -56,15 +59,21 @@ class Social_Counter extends WP_Widget {
         } else {
             $title = 'Title';
         }
+        if (isset($instance['cache']) and $instance['cache'] == 'on') {
+            $cache = $instance['cache'];
+            $checked = 'checked="checked"';
+        } else {
+            $cache = 'false';            
+        }
         echo '<p>
 <label for="' . $this->get_field_id('title') . '">Title:</label>
-<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . esc_attr($title) . '" /><br>Caching&nbsp;<input class="widefat"  id="' . $this->get_field_id('cache') . '" name="' . $this->get_field_name('cache') . '" type="checkbox" value="On"/></p>';
+<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . esc_attr($title) . '" /><br>Caching&nbsp;<input class="widefat"  id="' . $this->get_field_id('cache') . '" name="' . $this->get_field_name('cache') . '" type="checkbox" '.$checked.'/></p>';
     }
 
     public function update($new_instance, $old_instance) {
         $instance = array();
         $instance['title'] = (!empty($new_instance['title']) ) ? strip_tags($new_instance['title']) : '';
-        $instance['cache'] = $new_instance['cache'];
+        $instance['cache'] = (!empty($new_instance['cache'])) ? $new_instance['cache'] : 'false';
         return $instance;
     }
 
