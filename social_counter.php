@@ -9,7 +9,9 @@ Author URI: https://github.com/jzvikas/Social-Counter
 */
 require_once('social.php');
 require_once('widget.php');
-function social_counter() {
+function social_counter($atts, $content = null) {
+	global $post;
+extract(shortcode_atts(array(), $atts));	
 $current_url = home_url(add_query_arg(array()));
 $social = new Social;
 echo '<div class="sc_div">
