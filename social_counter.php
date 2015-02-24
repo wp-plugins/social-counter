@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Social Counter
-Plugin URI: https://github.com/jzvikas/Social-Counter 
+Plugin URI: 
 Description: Show social networks statistics
 Author: djjmz
-Version: 1.0.1
-Author URI: https://github.com/jzvikas/Social-Counter
+Version: 1.0.2
+Author URI: 
 */
 require_once('social.php');
 require_once('widget.php');
