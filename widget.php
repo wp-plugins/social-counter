@@ -54,6 +54,7 @@ class Social_Counter extends WP_Widget {
     }
 
     public function form($instance) {
+		$checked = '';
         if (isset($instance['title'])) {
             $title = $instance['title'];
         } else {
